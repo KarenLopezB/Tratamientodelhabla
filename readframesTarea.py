@@ -33,3 +33,17 @@ print(framerate_boo)
 time_boo = np.linspace(start=0, stop=len(ondaconvertida_boo) /framerate_boo, num=len(ondaconvertida_boo))
 
 print(time_boo[:10])
+
+#Generación de la gráfica
+plt.title("Netflix intro vs Boo gatito")
+
+#Etiquetas de los ejes
+plt.xlabel("Tiempo (segundos)")
+plt.ylabel("Amplitud")
+
+#Agregar información de las ondas para graficar
+plt.plot(time_net, netflixintro, label="Netflix intro")
+plt.plot(time_boo, boogatito, label="Boo gatito", alpha=0.5)
+
+plt.legend()
+plt.show()
