@@ -1,6 +1,6 @@
 import wave
 import numpy as np 
-import matplotlib as plt
+import matplotlib.pyplot as plt
 
 #Cargar archivo wav en la variable
 
@@ -38,15 +38,15 @@ time_ga = np.linspace(start=0, stop=len(ondaconvertida_after) /framerate_ga, num
 print(time_ga[:10])
 
 #Generación de la gráfica
-plt.title("Good morning vs Good afternoon")
+plt.title('Good morning vs Good afternoon')
 
 #Etiquetas de los ejes
-plt.xlabel("Tiempo (segundos)")
-plt.ylabel("Amplitud")
+plt.xlabel('Tiempo (segundos)')
+plt.ylabel('Amplitud')
 
 #Agregar información de las ondas para graficar
-plt.plot(time_gm, goodmorning, label="Good morning")
-plt.plot(time_ga, goodafternoon, label="Good afternoon", alpha=0.5)
+plt.plot(time_ga, ondaconvertida_after, label='Good Afternoon')
+plt.plot(time_gm, ondaconvertida, label='Good Morning', alpha=0.5)
 
 plt.legend()
 plt.show()
